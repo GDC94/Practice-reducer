@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const MAXIMUN_COUNT = 10;
 
 export default function CounterEffect() {
-  const [valor, setValor] = useState(5);
+  const [valor, setValor] = useState(1);
 
   const increase = () => {
     if(valor >= MAXIMUN_COUNT) return;
