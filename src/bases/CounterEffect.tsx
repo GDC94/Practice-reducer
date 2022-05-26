@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 
 
+const MAXIMUN_COUNT = 10;
+
 export default function CounterEffect() {
   const [valor, setValor] = useState(5);
 
   const increase = () => {
+    if(valor >= MAXIMUN_COUNT) return;
     setValor(prev => prev + 1);
   };
+
+
+
 
   useEffect(() => {
     if(valor >= 10){
