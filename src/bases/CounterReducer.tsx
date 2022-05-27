@@ -1,5 +1,7 @@
 import { useReducer, useState } from "react";
-import { counterAction, doIncreaseByOne } from "./actionsCreators";
+/*import { counterAction, doIncreaseByFive, doIncreaseByOne } from "./actionsCreators";*/
+//o bien podemos hacer la importacion de la siguiente manera 
+import * as ActionsCreators from "./actionsCreators";
 
 interface CounterState {
   counter: number;
@@ -15,7 +17,7 @@ const INITIAL_STATE: CounterState = {
 
 const counterReducer = (
   state: CounterState,
-  action: counterAction
+  action: ActionsCreators.counterAction
 ): CounterState => {
   switch (action.type) {
     case "reset":
@@ -51,11 +53,11 @@ export default function CounterReducerComponent() {
   };
 
   const increaseByOne = (value: number) => {
-    dispatch(doIncreaseByOne(value));
+    dispatch(ActionsCreators.doIncreaseByOne(value));
   };
 
   const increaseByFive = (value: number) => {
-    dispatch({ type: "increaseByFive", payload: { value } });
+    dispatch(ActionsCreators.doIncreaseByFive(value));
   };
 
   return (
