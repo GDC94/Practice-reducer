@@ -9,7 +9,6 @@ export const doIncreaseByOne = (value: number): counterAction => ({
 });
 
 //Esto es lo mismo que arriba pero con distinto formato.
-
 export const doIncreaseByFive = (value: number): counterAction => {
   return {
     type: "increaseByFive",

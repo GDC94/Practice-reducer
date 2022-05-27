@@ -1,6 +1,6 @@
 import { useReducer, useState } from "react";
 /*import { counterAction, doIncreaseByFive, doIncreaseByOne } from "./actionsCreators";*/
-//o bien podemos hacer la importacion de la siguiente manera 
+//o bien podemos hacer la importacion de la siguiente manera
 import * as ActionsCreators from "./actionsCreators";
 
 interface CounterState {
@@ -64,11 +64,11 @@ export default function CounterReducerComponent() {
     <div>
       <h1>Esto es un counter con un reducer</h1>
       <pre>{JSON.stringify(counterState, null, 2)}</pre>
+      
       <button onClick={onReset}> Reset </button>
-
       <button onClick={() => increaseByOne(1)}> + 1 </button>
-
       <button onClick={() => increaseByFive(5)}> + 5 </button>
+
     </div>
   );
 }
