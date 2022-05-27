@@ -26,7 +26,7 @@ export default function CounterEffect() {
       y: -10,
       duration: 0.2,
       ease: "ease-out",
-    }).to(counterElement.current, { y: 0, duration: 1, ease: "bounce-out" });
+    }).to(counterElement.current, { y: 0, duration: 0.5, ease: "bounce-out" });
   }, [valor]);
 
   return (
